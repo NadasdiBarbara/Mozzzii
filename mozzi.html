@@ -5,35 +5,50 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Mozifilmek</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     
 </head>
 <body>
 
-    <div>
-        <label>Add meg a film címét: </label>
-        <input type="text" name="nev" id="nev">
+    <div class="container">
+        <div class="jo">
+            <label>Add meg a film címét: </label>
+            <input  type="text" name="nev" id="nev">
+
+        </div>
+
+        <div class="jo">
+            <label>Add meg a film rendezőjét: </label>
+            <input type="text" name="rendezo" id="rendezo">
+
+        </div>
+
+        <div class="jo">
+            <label>Add meg a film kiadási évét: </label>
+            <input type="number" name="kiadasiEv" id="kiadasiEv">
+
+        </div>
 
     </div>
 
-    <div>
-        <label>Add meg a film rendezőjét: </label>
-        <input type="text" name="rendezo" id="rendezo">
+    <div class="container">
 
+            <div class="jo">
+                <div class="btn-group btn-group-lg">
+                    <button type="button" id="hozzaAd" class="btn btn-success">Hozzáad</button>
+                </div>
+
+                <div class="btn-group btn-group-lg">
+                    <button type="button" id="listaz" class="btn btn-danger">Listázás</button>
+                </div>
+
+        </div>
     </div>
 
-    <div>
-        <label>Add meg a film kiadási évét: </label>
-        <input type="text" name="kiadasiEv" id="kiadasiEv">
-
-    </div>
-
-
-    <button type="button" id="hozzaAd">Hozzáad</button>
-    <button type="button" id="listaz">Listázás</button>
-
-    <div>
-        <table>
+    <div class="container">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Név</th>
@@ -46,10 +61,6 @@
             </tbody>
         </table>
     </div>
-
-
-
-
 
     <script src='main.js'></script>
 </body>

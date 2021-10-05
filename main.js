@@ -28,7 +28,7 @@ function hozzaAd(){
     }
 
  }
- let vissza=true;
+let vissza=true;
 function listaz(){
     
     if (!vissza) {
@@ -38,12 +38,21 @@ function listaz(){
     else{
         let ures="";
         for (let i = 0; i < filmAdat.length; i++) {
+            if (i%2!=0) {
             ures+="<tr>";
             ures+="<td>"+ filmAdat[i].nev+"</td>";
             ures+="<td>"+ filmAdat[i].rendezo+"</td>";
             ures+="<td>"+ filmAdat[i].kiadasiEv+"</td>";
-            ures+="</tr>";
-            
+            ures+="</tr>";  
+            }
+            else{
+                ures+="<tr class='table-success'>";
+                ures+="<td>"+ filmAdat[i].nev+"</td>";
+                ures+="<td>"+ filmAdat[i].rendezo+"</td>";
+                ures+="<td>"+ filmAdat[i].kiadasiEv+"</td>";
+                ures+="</tr>";  
+            }
+                    
         }
         document.getElementById("lista").innerHTML=ures;
         vissza=false;
