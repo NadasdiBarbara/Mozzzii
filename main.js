@@ -28,13 +28,30 @@ function hozzaAd(){
     }
 
  }
-
+ let vissza=true;
 function listaz(){
-    let ures="";
-    for (let i = 0; i < filmAdat.length; i++) {
-        
-        
+    
+    if (!vissza) {
+        document.getElementById("lista").innerHTML="";
+        vissza=true;
     }
+    else{
+        let ures="";
+        for (let i = 0; i < filmAdat.length; i++) {
+            ures+="<tr>";
+            ures+="<td>"+ filmAdat[i].nev+"</td>";
+            ures+="<td>"+ filmAdat[i].rendezo+"</td>";
+            ures+="<td>"+ filmAdat[i].kiadasiEv+"</td>";
+            ures+="</tr>";
+            
+        }
+        document.getElementById("lista").innerHTML=ures;
+        vissza=false;
+    }
+    
+
+
 }
 
 document.getElementById('hozzaAd').addEventListener('click', hozzaAd);
+document.getElementById('listaz').addEventListener('click', listaz);
